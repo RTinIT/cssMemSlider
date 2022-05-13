@@ -9,7 +9,7 @@
 }
 
 .slider {
-  width: 70%;
+  width: 90vw;
   height: 80%;
   display: grid; 
   grid-template-rows: 4fr 1fr;
@@ -19,6 +19,7 @@
   overflow-x: hidden;
   background: #191919;
   overflow: hidden;
+  border-radius: 1em;
 }
 
 .slider__radio {
@@ -28,7 +29,6 @@
 .wrapper {
   grid-row-start: 1;
   grid-column-start: 1;
-
   grid-row-end: 2;
   grid-column-end: 3;
   display: flex;
@@ -41,31 +41,69 @@
 .slider__item {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide-img {
   width: 100%;
-  height: 70%;
+  height: 100%;
+}
+
+#img_1 {
+  background: url(./assets/img/mem_1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#img_2 {
+  background: url(./assets/img/mem_2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#img_3 {
+  background: url(./assets/img/mem_3.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#img_4 {
+  background: url(./assets/img/mem_4.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#img_5 {
+  background: url(./assets/img/mem_5.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 #item_1 {
-  background: rgb(10, 10, 50);
+  background: #6F7E3F;
 }
 
 #item_2 {
-  background: rgb(20, 20, 50);
+  background: #DED9D6;
 }
 
 #item_3 {
-  background: rgb(30, 30, 50);
+  background: #000000;
 }
 
 #item_4 {
-  background: rgb(40, 40, 50);
+  background: #000000;
 }
 
 #item_5 {
-  background: rgb(50, 50, 50);
+  background: #000000;
 }
 
 #btn_1:checked ~ .wrapper {
@@ -99,22 +137,18 @@
   height: 100%;
   margin: 0;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 400;
   transition: transform 700ms ease;
   transition-delay: 300ms;
-  opacity: 0;
-
 }
 
 #btn_1:checked ~ .slider__text-content .text-content{
   transform: translateY(0%);
-  opacity: 1;
 }
 
 #btn_2:checked ~ .slider__text-content .text-content{
   transform: translateY(-100%);
-  opacity: 1;
 
 }
 
