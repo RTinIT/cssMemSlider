@@ -9,10 +9,16 @@
 }
 
 .slider {
-  width: 80%;
+  width: 70%;
   height: 80%;
+  display: grid; 
+  grid-template-rows: 4fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em 0px;
   background: #191919;
   overflow-x: hidden;
+  background: #191919;
+  overflow: hidden;
 }
 
 .slider__radio {
@@ -20,16 +26,19 @@
 }
 
 .wrapper {
+  grid-row-start: 1;
+  grid-column-start: 1;
+
+  grid-row-end: 2;
+  grid-column-end: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 500%;
-  height: 70%;
   transition: transform 800ms cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .slider__item {
-  /* width: 900px; */
   width: 100%;
   height: 100%;
 }
@@ -60,50 +69,78 @@
 }
 
 #btn_1:checked ~ .wrapper {
-  transform: translateX(0)
+  transform: translateX(0);
 }
 
 #btn_2:checked ~ .wrapper {
-  transform: translateX(-20%)
+  transform: translateX(-20%);
 }
 
 #btn_3:checked ~ .wrapper {
-  transform: translateX(-40%)
+  transform: translateX(-40%);
 }
 
 #btn_4:checked ~ .wrapper {
-  transform: translateX(-60%)
+  transform: translateX(-60%);
 }
 
 #btn_5:checked ~ .wrapper {
-  transform: translateX(-80%)
+  transform: translateX(-80%);
 }
 
 .slider__text-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 500%;
-  height: 20%;
+  height: 100%;
+  padding-left: 2em;
+  overflow: hidden;
 }
 
 .text-content {
   width: 100%;
   height: 100%;
+  margin: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  transition: transform 700ms ease;
+  transition-delay: 300ms;
+  opacity: 0;
+
+}
+
+#btn_1:checked ~ .slider__text-content .text-content{
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+#btn_2:checked ~ .slider__text-content .text-content{
+  transform: translateY(-100%);
+  opacity: 1;
+
+}
+
+#btn_3:checked ~ .slider__text-content .text-content{
+  transform: translateY(-200%);
+}
+
+#btn_4:checked ~ .slider__text-content .text-content{
+  transform: translateY(-300%);
+}
+
+#btn_5:checked ~ .slider__text-content .text-content{
+  transform: translateY(-400%);
 }
 
 .slider__controls {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
+  justify-content: flex-end;
+  padding-right: 2em;
+  gap: 0.3em;
 }
 
 .slider__controls label {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 1em;
+  height: 1em;
   background: #ccc;
   border-radius: 50%;
   cursor: pointer;
