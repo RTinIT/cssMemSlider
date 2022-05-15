@@ -10,9 +10,9 @@
 
 .slider {
   width: 60vw;
-  height: 80%;
+  height: 70%;
   display: grid; 
-  grid-template-rows: 4fr 1fr;
+  grid-template-rows: 6fr 1fr;
   grid-template-columns: 2fr 1fr;
   gap: 2em 0;
   background: #191919;
@@ -168,29 +168,66 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 2em;
-  gap: 0.3em;
 }
 
 .slider__controls label {
   display: block;
-  width: 1em;
-  height: 1em;
-  background: #ccc;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  background: transparent;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.slider__controls label {
-  text-decoration: none;
+label:nth-child(1):hover span,
+label:nth-child(2):hover span,
+label:nth-child(3):hover span,
+label:nth-child(4):hover span,
+label:nth-child(5):hover span {
+  border: 0.1em solid white;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-#btn_1:checked ~ .slider__controls label:nth-child(1),
-#btn_2:checked ~ .slider__controls label:nth-child(2),
-#btn_3:checked ~ .slider__controls label:nth-child(3),
-#btn_4:checked ~ .slider__controls label:nth-child(4),
-#btn_5:checked ~ .slider__controls label:nth-child(5) {
-   background: rgb(38, 38, 235);
+label:nth-child(1):active,
+label:nth-child(2):active,
+label:nth-child(3):active,
+label:nth-child(4):active,
+label:nth-child(5):active {
+  background: #cdcdcd;
+  border-radius: 1em;
 }
+
+label span {
+  display: block;
+  width: 0.8em;
+  height: 0.8em;
+  background: #2626eb;
+  border: 0.1em solid #2626eb;
+  border-radius: 50%;
+}
+
+#btn_1:checked ~ .slider__controls label:nth-child(1) > span,
+#btn_2:checked ~ .slider__controls label:nth-child(2) > span,
+#btn_3:checked ~ .slider__controls label:nth-child(3) > span,
+#btn_4:checked ~ .slider__controls label:nth-child(4) > span,
+#btn_5:checked ~ .slider__controls label:nth-child(5) > span {
+  background: transparent;
+  border: 0.1em solid #2626eb;
+}
+
+#btn_1:checked ~ .slider__controls label:nth-child(1):hover > span,
+#btn_2:checked ~ .slider__controls label:nth-child(2):hover > span,
+#btn_3:checked ~ .slider__controls label:nth-child(3):hover > span,
+#btn_4:checked ~ .slider__controls label:nth-child(4):hover > span,
+#btn_5:checked ~ .slider__controls label:nth-child(5):hover > span {
+  background: transparent;
+  border: 0.1em solid #FFFFFF;
+}
+
 
 @media (max-width: 1669px){
   .slider {
