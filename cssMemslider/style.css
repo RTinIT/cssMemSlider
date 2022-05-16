@@ -2,15 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
   height: 100vh;
   background: #353535;
   color: #FFF;
 }
 
 .slider {
-  width: 60vw;
-  height: 70%;
+  width: 58em;
+  height: 80%;
   display: grid; 
   grid-template-rows: 6fr 1fr;
   grid-template-columns: 2fr 1fr;
@@ -39,11 +38,13 @@
 }
 
 .slider__item {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1.2em 1.2em 0 1.2em;
+  background: #000000;
 }
 
 .slide-img {
@@ -86,26 +87,6 @@
   background-position: center;
 }
 
-#item_1 {
-  background: #000000;
-}
-
-#item_2 {
-  background: #DED9D6;
-}
-
-#item_3 {
-  background: #000000;
-}
-
-#item_4 {
-  background: #000000;
-}
-
-#item_5 {
-  background: #000000;
-}
-
 #btn_1:checked ~ .wrapper {
   transform: translateX(0);
 }
@@ -128,7 +109,7 @@
 
 .slider__text-content {
   height: 100%;
-  padding-left: 2em;
+  padding-left: 1em;
   overflow: hidden;
 }
 
@@ -141,6 +122,7 @@
   font-weight: 400;
   transition: transform 700ms ease;
   transition-delay: 300ms;
+  padding-top: 0.5rem;
 }
 
 #btn_1:checked ~ .slider__text-content .text-content{
@@ -167,13 +149,14 @@
 .slider__controls {
   display: flex;
   justify-content: flex-end;
-  padding-right: 2em;
+  padding-right: 1em;
 }
 
 .slider__controls label {
   display: block;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 1.8em;
   height: 1.8em;
   background: transparent;
@@ -228,26 +211,19 @@ label span {
   border: 0.1em solid #FFFFFF;
 }
 
-
-@media (max-width: 1669px){
+@media (max-width: 990px){
   .slider {
-    width: 65vw;
-  }
-}
-
-@media (max-width: 1300px){
-  .slider {
-    width: 75vw;
+    margin: 0 2rem;
   }
 }
 
 @media (max-width: 767px){
-  .container {
+   .container {
     align-items: flex-start;
     padding-top: 5em;
-  }
-  .slider {
-    width: 90vw;
+  } 
+   .slider {
+    width: 80%;
     height: 50%;
     grid-template-rows: 4fr 0.3fr 1fr;
     grid-template-columns: 1fr;
@@ -261,7 +237,6 @@ label span {
   .slider__text-content {
     width: 90%;
     height: 60%;
-    padding-left: 0.5em;
     order: 3;
   }
 
@@ -270,11 +245,23 @@ label span {
     font-weight: 400;
     transition: transform 700ms ease;
     transition-delay: 300ms;
+    padding-top: 0;
   }
 
   .slider__controls {
     justify-content: center;
     padding-right: 0;
     order: 2;
+  }
+
+  .slider__controls label {
+    align-items: center;
+  }
+}
+
+@media (max-width: 350px){
+  .slider {
+    width: 90%;
+    height: 40%;
   }
 }
