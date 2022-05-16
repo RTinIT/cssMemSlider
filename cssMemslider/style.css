@@ -8,8 +8,8 @@
 }
 
 .slider {
-  width: 58em;
-  height: 80%;
+  width: 58rem;
+  height: 42rem;
   display: grid; 
   grid-template-rows: 6fr 1fr;
   grid-template-columns: 2fr 1fr;
