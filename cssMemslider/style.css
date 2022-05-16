@@ -122,7 +122,7 @@
   font-weight: 400;
   transition: transform 700ms ease;
   transition-delay: 300ms;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 
 #btn_1:checked ~ .slider__text-content .text-content{
@@ -157,8 +157,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1.8em;
-  height: 1.8em;
+  width: 2rem;
+  height: 3rem;
   background: transparent;
   cursor: pointer;
   transition: 0.3s;
@@ -180,7 +180,7 @@ label:nth-child(2):active,
 label:nth-child(3):active,
 label:nth-child(4):active,
 label:nth-child(5):active {
-  background: #cdcdcd;
+  background: #0f0f0f;
   border-radius: 1em;
 }
 
