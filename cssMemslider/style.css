@@ -19,6 +19,8 @@
   background: #191919;
   overflow: hidden;
   border-radius: 1em;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 70%),
+             -5px 5px 5px rgb(0 0 0 / 70%);
 }
 
 .slider__radio {
